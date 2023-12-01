@@ -23,7 +23,7 @@ function AddEvent(props: any) {
 
   const [guest, setGuest] = useState([""]);
   const [notification, setNotification] = useState("email");
-  const [file, setFile] = useState<File | null>(null);
+  // const [file, setFile] = useState<File | null>(null);
   const [email, setEmail] = useState("");
   const [description, setDescription] = useState("");
 
@@ -37,13 +37,13 @@ function AddEvent(props: any) {
     setEmail("");
   };
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const selectedFile = e.target.files?.[0];
+  // const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   const selectedFile = e.target.files?.[0];
 
-    if (selectedFile) {
-      setFile(selectedFile);
-    }
-  };
+  //   if (selectedFile) {
+  //     setFile(selectedFile);
+  //   }
+  // };
 
   const handleSubmit = async () => {
     // const formData = new FormData();
@@ -311,9 +311,9 @@ function AddEvent(props: any) {
             </div>
           </div>
           <div>
-            <div className="py-4">
+            {/* <div className="py-4">
               <input type="file" onChange={handleFileChange} />
-            </div>
+            </div> */}
           </div>
           <div className=" w-full flex justify-end">
             <div className=" flex gap-4 flex-wrap py-4 justify-center">
